@@ -1,0 +1,19 @@
+# SQLite version 3.x
+#   gem install sqlite3
+#
+#   Ensure the SQLite 3 gem is defined in your Gemfile
+#   gem 'sqlite3'
+development:
+  adapter: sqlite3
+  database: database.db
+
+test:
+  adapter: sqlite3
+  database: database.db
+
+production:
+  adapter: postgresql
+  database: trysharelove_production
+  username: trysharelove
+  password: trysharelove
+  host: localhost
