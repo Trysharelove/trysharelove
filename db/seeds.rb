@@ -1,7 +1,55 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
-#
-# Examples:
-#
-#   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
-#   Mayor.create(name: 'Emanuel', city: cities.first)
+Post.destroy_all
+
+Posts= [
+
+  { :title => "Really Cool Product", 
+    :description => "This is a description of a product that I think is really cool", 
+    :image => "/assets/image.png",
+    :price => "$125",
+    :link => "www.buynow.com",
+    :category => "Fashion"
+  },
+
+   { :title => "Really Cool Product", 
+    :description => "This is a description of a product that I think is really cool", 
+    :image => "/assets/image.png",
+    :price => "$125",
+    :link => "www.buynow.com",
+    :category => "Fashion"
+  },
+
+  { :title => "Really Cool Product", 
+    :description => "This is a description of a product that I think is really cool", 
+    :image => "/assets/image.png",
+    :price => "$125",
+    :link => "www.buynow.com",
+    :category => "Fashion"
+  },
+
+  { :title => "Really Cool Product", 
+    :description => "This is a description of a product that I think is really cool", 
+    :image => "/assets/image.png",
+    :price => "$125",
+    :link => "www.buynow.com",
+    :category => "Fashion"
+  },
+
+  { :title => "Really Cool Product", 
+    :description => "This is a description of a product that I think is really cool", 
+    :image => "/assets/image.png",
+    :price => "$125",
+    :link => "www.buynow.com",
+    :category => "Fashion"
+  },
+
+  { :title => "Really Cool Product", 
+    :description => "This is a description of a product that I think is really cool", 
+    :image => "/assets/image.png",
+    :price => "$125",
+    :link => "www.buynow.com",
+    :category => "Fashion"
+  },
+
+
+]
+Post.create Posts

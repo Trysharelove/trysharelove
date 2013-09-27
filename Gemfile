@@ -43,6 +43,8 @@ ruby '2.0.0'
 
 gem 'rails_12factor'
 
+gem 'devise'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 

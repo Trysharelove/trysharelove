@@ -1,0 +1,65 @@
+<div class="container-fluid">
+  <div class="row-fluid">
+    <div class="span12">
+      <div class="posts">
+        <% @posts.each do |post| %>
+        <div class="post-box">
+          <div class="post-image">
+            <div><%= link_to image_tag(post.image), post %></div>
+          </div>
+          <div class="post-info">
+            <h5><%= post.title %></h5>
+          </div>
+          <% if admin_signed_in? %>
+          <%= link_to 'Delete', post, method: :delete, data: { confirm: 'Are you sure?' }, :class => 'delete btn btn-mini btn-danger' %>
+          <% end %>
+        </div>
+      <% end %>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- <h1>Listing posts</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Image</th>
+      <th>Link</th>
+      <th>Description</th>
+      <th>Price</th>
+      <th>Category</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @posts.each do |post| %>
+      <tr>
+        <td><%= post.title %></td>
+        <td><%= post.image %></td>
+        <td><%= post.link %></td>
+        <td><%= post.description %></td>
+        <td><%= post.price %></td>
+        <td><%= post.category %></td>
+        <td><%= link_to 'Show', post %></td>
+        <td><%= link_to 'Edit', edit_post_path(post) %></td>
+        <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table> -->
+
+<br>
+
+<% if admin_signed_in? %>
+<%= link_to 'New Post', new_post_path %> |
+<%= link_to  "Sign Out as Admin", destroy_admin_session_path, method: :delete %>
+<% else %>
+<a href="/admins/sign_in">Sign In</a>
+<% end %>
+

@@ -4,9 +4,21 @@
   <title>Trysharelove</title>
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
   <%= csrf_meta_tags %>
 </head>
 <body>
+
+<div class="nav-head">
+	<div class="container-fluid">
+		<div class="nav-head-inner row-fluid">
+			<div class="span3">
+				<h4>Try Share Love</h4>
+			</div>
+			<div class="span9"></div>
+		</div>
+	</div>
+</div>
 
 <%= yield %>
 

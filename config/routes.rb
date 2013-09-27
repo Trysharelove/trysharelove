@@ -1,3 +1,8 @@
 Trysharelove::Application.routes.draw do
-  root 'application#index'
+  devise_for :admins
+  resources :posts
+
+  root 'posts#index'
+
+	get '/admin', to: 'pages#admin'
 end
