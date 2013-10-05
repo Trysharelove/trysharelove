@@ -1,6 +1,14 @@
 @import "variables"
 @import "mixins"
 
+.header
+	background: url('/assets/indexbg.jpg')
+	background-size: cover
+	color: $white
+	height: 230px
+	padding-top: 120px
+	text-align: center
+
 .posts
 	margin: 0 auto
 	max-width: 1200px
@@ -12,10 +20,18 @@
 		position: relative
 		width: 270px
 		.post-info
-			border-bottom: 3px solid #eee
-			background: $white
+			border-bottom: 3px solid #333
+			background: rgba(51,51,51,0.7)
+			bottom: 0
+			color: $white
 			padding: 10px
+			position: absolute
+			width: 250px
 		.delete
+			display: none
 			position: absolute
 			right: 10px
 			top: 10px
+		&:hover
+			.delete
+				display: block

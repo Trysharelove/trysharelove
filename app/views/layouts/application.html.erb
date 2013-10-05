@@ -15,7 +15,14 @@
 			<div class="span3">
 				<h4>Try Share Love</h4>
 			</div>
-			<div class="span9"></div>
+			<div class="span9">
+				<% if admin_signed_in? %>
+				<%= link_to  "Sign Out", destroy_admin_session_path, method: :delete %>
+				<a href="<%= new_post_path %>" class="btn info"><i class="icon-plus"></i> New Post</a>
+				<% else %>
+				<a href="/admins/sign_in">Sign In</a>
+				<% end %>
+			</div>
 		</div>
 	</div>
 </div>
