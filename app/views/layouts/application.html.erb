@@ -5,6 +5,8 @@
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+  <link href='http://fonts.googleapis.com/css?family=Bitter:400,700' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,700' rel='stylesheet' type='text/css'>
   <%= csrf_meta_tags %>
 </head>
 <body>
@@ -19,6 +21,7 @@
 				<% if admin_signed_in? %>
 				<%= link_to  "Sign Out", destroy_admin_session_path, method: :delete %>
 				<a href="<%= new_post_path %>" class="btn info"><i class="icon-plus"></i> New Post</a>
+				<a href="<%= new_category_path %>" class="btn info"><i class="icon-plus"></i> New Category</a>
 				<% else %>
 				<a href="/admins/sign_in">Sign In</a>
 				<% end %>

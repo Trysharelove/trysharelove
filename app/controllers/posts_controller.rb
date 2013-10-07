@@ -9,6 +9,10 @@ class PostsController < ApplicationController
     @posts = Post.all
   end
 
+  def diggs
+    @diggs = Post.where(:category_id => "1")
+  end
+
   # GET /posts/1
   # GET /posts/1.json
   def show
