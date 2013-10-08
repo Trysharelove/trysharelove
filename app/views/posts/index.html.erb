@@ -13,17 +13,21 @@
         <div class="post-box">
           <div class="post-image">
             <div><%= link_to image_tag(post.image), post %></div>
+            <div><%= link_to image_tag(post.image), post, :class => 'hover-image ' %>
+              <h4><%= link_to post.title, post, :class => 'hover-title ' %></h4>
+              <p><%= link_to post.description, post, :class => 'hover-description ' %></p>
+            </div>
           </div>
           <div class="post-footer">
-            <h5><%= link_to post.title, post %></h5>
-            <p class="description"><%= link_to post.description, post %></p>
+            <i class="icon-food category-icon"></i>
+            <h5 class="title"><%= link_to post.title, post %></h5>
           </div>
           <% if admin_signed_in? %>
           <%= link_to 'Delete', post, method: :delete, data: { confirm: 'Are you sure?' }, :class => 'delete btn btn-mini btn-danger' %>
           <%= link_to 'Edit', edit_post_path(post), :class => 'edit btn btn-mini ' %>
           <% end %>
         </div>
-      <% end %> ``
+      <% end %> 
       </div>
     </div>
   </div>
@@ -33,7 +37,8 @@
 <script>
 $( document ).ready(function() {
   $('.posts').masonry({
-    itemSelector: '.post-box'
+    itemSelector: '.post-box', 
+    "isFitWidth": true
   });
 });
 </script>
